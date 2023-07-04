@@ -1,2 +1,2 @@
-# PredictionMethods
-Métodos de predicción
+# Métodos de predicción
+
