@@ -112,6 +112,9 @@ Métricas de evaluación: Las métricas de evaluación se utilizan para medir el
 
 Es importante tener en cuenta que la elección del método de validación y las métricas de evaluación dependen del problema específico y del tipo de datos que se esté utilizando. La elección adecuada de estos métodos puede ayudar a evaluar y comparar diferentes modelos, seleccionar el mejor modelo y comprender su rendimiento en situaciones del mundo real.
 
+Ejemplo:
+https://machinelearningmastery.com/how-to-estimate-model-accuracy-in-r-using-the-caret-package/
+
 ## 3.4 Selección de características y reducción de dimensionalidad.
 La selección de características y la reducción de dimensionalidad son técnicas utilizadas en machine learning para mejorar el rendimiento de los modelos y facilitar el procesamiento de datos con alta dimensionalidad. Estas técnicas tienen como objetivo identificar las características más relevantes o reducir el número de dimensiones del conjunto de datos sin perder demasiada información. A continuación, se explica cada una de ellas:
 
