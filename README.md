@@ -6,66 +6,24 @@ Los modelos de regresión son una técnica estadística utilizada para analizar 
 ## 3.1.1 Lineal.
 
 La regresión lineal es utilizada cuando la variable dependiente es continua y se busca establecer una relación lineal entre esta variable y una o más variables independientes. El modelo de regresión lineal asume que la relación entre las variables se puede representar mediante una línea recta. El objetivo es encontrar los coeficientes que minimizan la diferencia entre los valores observados y los valores predichos por la línea de regresión.
-La ecuación de un modelo de regresión lineal simple se expresa como:
-
-y = β₀ + β₁x + ɛ
-
-Donde:
-y es la variable dependiente.
-x es la variable independiente.
-β₀ y β₁ son los coeficientes que representan la intersección y la pendiente de la línea de regresión, respectivamente.
-ɛ es el término de error, que representa las diferencias entre los valores observados y los valores predichos.
-
 
 ## 3.1.2 Logística.
 La regresión logística se utiliza cuando la variable dependiente es binaria o categórica y se busca predecir la probabilidad de que ocurra un evento o una categoría en particular. A diferencia de la regresión lineal, que se basa en una relación lineal, la regresión logística utiliza una función logística para modelar la relación entre las variables independientes y la probabilidad de ocurrencia del evento.
-La ecuación de un modelo de regresión logística se expresa como:
-
-p = 1 / (1 + e^(-z))
-
-Donde:
-p es la probabilidad de ocurrencia del evento.
-z es una combinación lineal de las variables independientes y sus coeficientes.
 
 El objetivo es encontrar los coeficientes que maximizan la verosimilitud de los datos observados y, por lo tanto, estimen la probabilidad de ocurrencia del evento.
-
 
 ## 3.1.3 Polinomial.
 
 La regresión polinomial se utiliza cuando la relación entre las variables no es lineal y puede ser mejor aproximada mediante un polinomio de grado superior. En este caso, se ajusta un modelo polinomial a los datos para capturar la relación no lineal.
 
-
-La ecuación de un modelo de regresión polinomial se expresa como:
-
-y = β₀ + β₁x + β₂x² + ... + βₙxⁿ + ɛ
-
-Donde:
-y es la variable dependiente.
-x es la variable independiente.
-β₀, β₁, β₂, ..., βₙ son los coeficientes que representan la intersección y los coeficientes de los términos polinomiales.
-ɛ es el término de error.
-
 El grado del polinomio (n) determina la flexibilidad del modelo y puede ajustarse según la complejidad de la relación no lineal.
 
+<img src="https://github.com/unciafidelis/PredictionMethods/blob/main/Assets/Captura%20de%20pantalla%202023-07-05%20a%20la(s)%208.45.50.png" width="70%" height="70%" alt="Polinomial" /> 
 
 http://sthda.com/english/articles/40-regression-analysis/162-nonlinear-regression-essentials-in-r-polynomial-and-spline-regression-models/ 
 
 ## 3.2 Modelos de clasificación. 
 Los modelos de clasificación son técnicas y algoritmos utilizados para asignar instancias o ejemplos a diferentes categorías o clases. Estos modelos son ampliamente utilizados en el campo del aprendizaje automático (machine learning) y se aplican en diversos problemas, como la detección de spam en correos electrónicos, reconocimiento de imágenes, diagnóstico médico, detección de fraudes y muchas otras aplicaciones.
-
-EJEMPLOS Sencillos, hay varios tutoriales: 
-https://tutoriales.edu.lat/pub/r/r-logistic-regression/r-regresion-logistica 
-https://www.cienciadedatos.net/machine-learning-r.html
-https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html
-
-
-*Árboles de decisión y KNN (Esta mejor la parte de KNN, pero igual revisar). Base de datos Iris
-
-http://fce.unal.edu.co/uifce-blog/2021/09/28/machine-learning-en-r/
-
-*Base de datos titanic, árboles de decisión, ver los siguientes 2 links:
-https://fervilber.github.io/Aprendizaje-supervisado-en-R/arboles.html
-https://gonzalezgouveia.com/modelo-de-clasificacion-con-arboles-de-decision-en-r-con-ejemplo-en-rstudio/ 
 
 ## 3.2.1 Árboles de decisión.
 Los árboles de decisión son modelos de clasificación y regresión que utilizan una estructura en forma de árbol para representar decisiones y sus posibles resultados. Estos modelos son ampliamente utilizados en el campo del aprendizaje automático (machine learning) y son especialmente útiles cuando se requiere interpretabilidad y explicabilidad en el proceso de toma de decisiones.
@@ -118,19 +76,39 @@ La elección del valor de K es un parámetro importante en el algoritmo KNN. Un 
 
 El algoritmo KNN tiene algunas ventajas notables, como su simplicidad y facilidad de interpretación, su capacidad para manejar problemas con múltiples clases y su capacidad para capturar relaciones no lineales en los datos. Sin embargo, también tiene limitaciones, como su sensibilidad a la elección de K y a la distribución de los datos, y su ineficiencia en grandes conjuntos de datos.
 
+EJEMPLOS Sencillos, hay varios tutoriales: 
+https://tutoriales.edu.lat/pub/r/r-logistic-regression/r-regresion-logistica 
+https://www.cienciadedatos.net/machine-learning-r.html
+https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html
+http://fce.unal.edu.co/uifce-blog/2021/09/28/machine-learning-en-r/
+https://fervilber.github.io/Aprendizaje-supervisado-en-R/arboles.html
+https://gonzalezgouveia.com/modelo-de-clasificacion-con-arboles-de-decision-en-r-con-ejemplo-en-rstudio/ 
+
 ## 3.3 Métodos de validación y evaluación de modelos.
 En el campo del machine learning, los métodos de validación y evaluación de modelos son fundamentales para comprender el desempeño y la eficacia de un modelo predictivo. Estos métodos nos permiten medir cómo se generaliza el modelo a datos no vistos y cómo se comportará en situaciones del mundo real. A continuación, describiré algunos de los métodos de validación y evaluación más comunes:
 
 Validación cruzada (Cross-Validation): Este método implica dividir el conjunto de datos en múltiples subconjuntos o "pliegues" (folds) para entrenar y evaluar el modelo de manera repetida. El enfoque más común es la validación cruzada k-fold, donde los datos se dividen en k pliegues, y se realizan K iteraciones, utilizando cada pliegue como conjunto de prueba y el resto como conjunto de entrenamiento. Al final, se promedian las métricas de evaluación obtenidas en cada iteración.
 
+<img src="https://github.com/unciafidelis/PredictionMethods/blob/main/Assets/Captura%20de%20pantalla%202023-07-05%20a%20la(s)%208.46.42.png" width="70%" height="70%" alt="CrossValidation" /> 
+
 Holdout: En este enfoque, se divide el conjunto de datos en dos conjuntos distintos: un conjunto de entrenamiento y un conjunto de prueba. El modelo se entrena en el conjunto de entrenamiento y luego se evalúa en el conjunto de prueba. El tamaño de los conjuntos puede variar, pero es común usar un porcentaje alto para entrenamiento (por ejemplo, 80%) y el resto para pruebas.
+
+<img src="https://github.com/unciafidelis/PredictionMethods/blob/main/Assets/Captura%20de%20pantalla%202023-07-05%20a%20la(s)%208.47.16.png" width="70%" height="70%" alt="CrossValidation" /> 
 
 Validación en retención (Holdout Validation): En este método, se separa una porción del conjunto de datos para su validación mientras se entrena el modelo en el resto de los datos. Luego, se evalúa el modelo utilizando los datos de validación retenidos para obtener una estimación del rendimiento en datos no vistos. Es importante asegurarse de que los datos retenidos sean representativos de la distribución general de los datos.
 NOTA: Existen diferentes maneras de separar un conjunto de datos.
 
+<img src="https://github.com/unciafidelis/PredictionMethods/blob/main/Assets/Captura%20de%20pantalla%202023-07-05%20a%20la(s)%208.47.52.png" width="70%" height="70%" alt="CrossValidation" /> 
+
 Validación cruzada estratificada (Stratified Cross-Validation): Este método es similar a la validación cruzada k-fold, pero se asegura de que la proporción de muestras de cada clase en los pliegues sea similar a la proporción en el conjunto de datos original. Es especialmente útil cuando se trabaja con conjuntos de datos desequilibrados, donde las clases tienen diferentes cantidades de muestras.
 
+<img src="https://github.com/unciafidelis/PredictionMethods/blob/main/Assets/Captura%20de%20pantalla%202023-07-05%20a%20la(s)%208.48.24.png" width="70%" height="70%" alt="CrossValidation" /> 
+
 Métricas de evaluación: Las métricas de evaluación se utilizan para medir el rendimiento del modelo y pueden variar dependiendo del tipo de problema. Algunas métricas comunes incluyen la precisión (accuracy), la precisión (precisión), la exhaustividad (recall), la puntuación F1 (F1-score), el área bajo la curva ROC (AUC-ROC) y el error cuadrático medio (mean squared error), entre otros.
+
+<img src="https://github.com/unciafidelis/PredictionMethods/blob/main/Assets/Captura%20de%20pantalla%202023-07-05%20a%20la(s)%208.48.48.png" width="70%" height="70%" alt="CrossValidation" /> 
+
+<img src="https://github.com/unciafidelis/PredictionMethods/blob/main/Assets/Captura%20de%20pantalla%202023-07-05%20a%20la(s)%208.49.14.png" width="20%" height="20%" alt="CrossValidation" /> 
 
 Es importante tener en cuenta que la elección del método de validación y las métricas de evaluación dependen del problema específico y del tipo de datos que se esté utilizando. La elección adecuada de estos métodos puede ayudar a evaluar y comparar diferentes modelos, seleccionar el mejor modelo y comprender su rendimiento en situaciones del mundo real.
 
