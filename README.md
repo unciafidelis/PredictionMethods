@@ -126,15 +126,9 @@ Wrapper de características: Se utilizan algoritmos de aprendizaje automático p
 
 Incorporación de características: Se utilizan técnicas de aprendizaje automático para incorporar características de manera incremental y evaluar su impacto en el rendimiento del modelo.
 
-Reducción de dimensionalidad: Esta técnica se utiliza para disminuir el número de dimensiones en conjuntos de datos de alta dimensionalidad. Al reducir la dimensionalidad, se busca eliminar características irrelevantes o redundantes, y comprimir la información en un espacio de menor dimensión. Algunos métodos populares de reducción de dimensionalidad incluyen:
+Reducción de dimensionalidad: Esta técnica se utiliza para disminuir el número de dimensiones en conjuntos de datos de alta dimensionalidad. Al reducir la dimensionalidad, se busca eliminar características irrelevantes o redundantes, y comprimir la información en un espacio de menor dimensión. 
 
-Análisis de componentes principales (PCA): Utiliza una transformación lineal para proyectar los datos en un nuevo espacio de menor dimensión que maximice la varianza de los datos proyectados. Las nuevas dimensiones son combinaciones lineales de las características originales.
-
-Análisis discriminante lineal (LDA): Similar al PCA, pero se enfoca en maximizar la separabilidad entre las clases en lugar de la varianza total. Es especialmente útil en problemas de clasificación.
-
-Selección de características basada en modelos: Se utilizan algoritmos de aprendizaje automático para seleccionar un subconjunto de características que son más relevantes para el modelo. Esto puede lograrse mediante técnicas como la eliminación recursiva de características (Recursive Feature Elimination, RFE) o la selección basada en árboles de decisión.
-
-Técnicas de descomposición de matrices: Utilizan técnicas como descomposición en valores singulares (Singular Value Decomposition, SVD) o factorización de matrices no negativas (Non-Negative Matrix Factorization, NMF) para encontrar representaciones de menor dimensión de los datos.
+Selección de características basada en modelos: Se utilizan algoritmos de aprendizaje automático para seleccionar un subconjunto de características que son más relevantes para el modelo. Esto puede lograrse mediante técnicas como la eliminación recursiva de características (Recursive Feature Elimination, RFE).
 
 La selección de características y la reducción de dimensionalidad son herramientas poderosas para mejorar el rendimiento de los modelos y abordar problemas de alta dimensionalidad. Sin embargo, es importante tener en cuenta que la elección de la técnica adecuada depende del problema específico, el conjunto de datos y los objetivos del análisis.
 
